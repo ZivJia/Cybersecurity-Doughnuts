@@ -1,25 +1,20 @@
 {
-  "name": "vue-workspace",
-  "version": "0.0.0",
+  "name": "hmi-workspace",
+  "version": "0.1.0",
   "private": true,
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "vue": "^3.4.21",
-    "vue-draggable-resizable": "^3.0.0"
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.4"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.4",
-    "@vitejs/plugin-vue-jsx": "^3.1.0",
-    "eslint": "^8.57.0",
-    "eslint-plugin-vue": "^9.23.0",
-    "sass": "^1.77.4",
-    "vite": "^5.2.8",
-    "vite-plugin-vue-devtools": "^7.0.25"
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4"
   }
 }
