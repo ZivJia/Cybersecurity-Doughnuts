@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+The Cybersecurity checklist for fullstack software engineers
 
 ## Getting Started
 
@@ -6,31 +6,62 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to view your current cybersecurity score.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Click into each module and check on things you already adopted.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The overall score will be changed whenever you mark the item as done. This is a great handbook for you when doing fullstack development.
+For different projects you own, I highly suggest you create a cybersecurity measurement in the UI for it, so that you can always come back and refer to it.
 
-## Learn More
+### Areas of focus:
 
-To learn more about Next.js, take a look at the following resources:
+#### Infrastructure Set Up
+1. Give minimal access rights for co-workers on infra
+2. Have Infrastructure as Code (IaC) setup to reduce human mistakes
+3. Have you configuration and database backups set up
+4. Enable all logging for the infrastructure service you use
+5. Build a Runbook for disaster recovery when the infrastructure is down.
+6. Have the Web Application Firewalls (WAF) set up
+7. Only allow traffic from known IP ranges
+8. Disable insecure protocols like telnet and SNMP
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Deployment Pipeline Recommendations
+1. Make sure only necessary people has access to CI/CD credentials
+2. Set up vulnerability scanner, so you get notified if any of your dependencies are vulnerable.
+3. Gitleak scanner integration
+4. Checkov integrations
+5. Syft Software Bill of Materials integration
+6. Semgrep integration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+#### Backend Development Checklist
+1. Verify the user with every request, using specialized authentication server
+2. API should have authorization built up against the requester
+3. API key access should have roles that ties to authorization
+4. API keys should be rotated with fixed amount of time
+5. Be aware of SQL injections
+6. Always upgrade http to https if possible
+7. Use most up to date credential generating algorithms
+8. Never store credentials in plain text
+9. Strict input validation is in place
+10. Use technologies like PGP encryption for files
+11. Scan random uploaded files
+12. Implement a good logger
+13. Produce logs for every access temptation
+14. Hooks logs into SIEM systems
+15. Never hardcode sensitive information
 
-## Deploy on Vercel
+#### Frontend Development Checklist
+1. Be aware of Cross-Site Scripting (XSS)
+2. Be aware of Cross-Site Request Forgery (CSRF)
+3. Avoid allowing third party cookie whenever possible
+4. Authenticate the user before granting access
+5. Strict input validation for form submission
+6. Set timeouts for browser sessions
+7. Avoid using any sensitive identifier in the URL parameters
+8. Never hardcode sensitive information
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Future and Ongoing
+This Repository is established by my own experience, from online learnings and lectures. With more experience accumulated, these security measures will be updated and newest recommendations will be provided.
+I recommend to transfer your previous measurements into the most up-to-date one.
