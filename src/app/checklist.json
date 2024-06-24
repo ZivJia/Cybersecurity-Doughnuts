@@ -3,7 +3,8 @@
     "name": "Frontend Development Checklist",
     "checklist": [
       {
-        "name": "Check user input to prevent XSS"
+        "name": "Check user input to prevent XSS",
+        "value": true
       }
     ]
   },
@@ -11,7 +12,8 @@
     "name": "Verify the user with every request",
     "checklist": [
       {
-        "name": "Check user input to prevent XSS"
+        "name": "Check user input to prevent XSS",
+        "value": false
       }
     ]
   },
@@ -19,7 +21,8 @@
     "name": "Infrastructure Set Up",
     "checklist": [
       {
-        "name": "Give minimal access rights for co-workers on infra account"
+        "name": "Give minimal access rights for co-workers on infra account",
+        "value": false
       }
     ]
   },
@@ -27,7 +30,8 @@
     "name": "Deployment pipeline recommendations",
     "checklist": [
       {
-        "name": "Make sure only necessary people has access to CI/CD credentials"
+        "name": "Make sure only necessary people has access to CI/CD credentials",
+        "value": false
       }
     ]
   }
