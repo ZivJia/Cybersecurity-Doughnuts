@@ -1,0 +1,34 @@
+{
+  "frontend": {
+    "name": "Frontend Development Checklist",
+    "checklist": [
+      {
+        "name": "Check user input to prevent XSS"
+      }
+    ]
+  },
+  "backend": {
+    "name": "Verify the user with every request",
+    "checklist": [
+      {
+        "name": "Check user input to prevent XSS"
+      }
+    ]
+  },
+   "infra": {
+    "name": "Infrastructure Set Up",
+    "checklist": [
+      {
+        "name": "Give minimal access rights for co-workers on infra account"
+      }
+    ]
+  },
+  "pipeline": {
+    "name": "Deployment pipeline recommendations",
+    "checklist": [
+      {
+        "name": "Make sure only necessary people has access to CI/CD credentials"
+      }
+    ]
+  }
+}
