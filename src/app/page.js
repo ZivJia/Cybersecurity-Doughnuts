@@ -1,75 +1,87 @@
 "use client";
 
 import defaultChecklist from './checklist.json'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import styles from "./page.module.css"
 import DoughnutChart from "./DoughnutChart";
+import { Grid } from '@mui/material';
+import Checklist from './Checklist';
 
-const getFinishedCount = (category) => {
-  return category.checklist.reduce((acc, cur) => acc + cur.value ? 1 : 0, 0)
-}
-
-const getUnfinished = (checklist) => {
-  const allCount = checklist['frontend'].checklist.length + 
-    checklist['backend'].checklist.length + 
-    checklist['infra'].checklist.length + 
-    checklist['pipeline'].checklist.length
-
-  const unfinished = allCount - 
-    getFinishedCount(checklist['frontend']) -
-    getFinishedCount(checklist['backend']) - 
-    getFinishedCount(checklist['infra']) - 
-    getFinishedCount(checklist['pipeline'])
-
-  return unfinished
-}
-
-const getChartData = (checklist) => {
-  return {
-    labels: [
-      checklist['frontend'].name,
-      checklist['backend'].name,
-      checklist['infra'].name,
-      checklist['pipeline'].name,
-      'Waiting on action',
-    ], 
-    datasets: [
-      {
-        label: "Items checked",
-        data: [
-          getFinishedCount(checklist['frontend']),
-          getFinishedCount(checklist['backend']),
-          getFinishedCount(checklist['infra']),
-          getFinishedCount(checklist['pipeline']),
-          getUnfinished(checklist)
-        ],
-        backgroundColor: [
-          "rgba(75,192,192,1)",
-          "#ecf0f1",
-          "#50AF95",
-          "#f3ba2f",
-          "#2a71d0"
-        ],
-        borderWidth: 0
-      }
-    ]
-  }
-}
 
 export default function Home() {
-  const [checklist, setChecklist] = useState(defaultChecklist)
-  const [chartData, setChartData] = useState(getChartData(checklist))
+  const [frontendList, setFrontendList] = useState(defaultChecklist['frontend'])
+  const [backendList, setBackendList] = useState(defaultChecklist['backend'])
+  const [infraList, setInfraList] = useState(defaultChecklist['infra'])
+  const [pipelineList, setPipelineList] = useState(defaultChecklist['pipeline'])
 
-  useEffect(
-    () => setChartData(getChartData(checklist)),
-    [setChartData, checklist]
-  )
+  const [selectedCategory, setSelectedCategory] = useState(null)
+  const onClickDoughnut = (category) => {
+    setSelectedCategory(defaultChecklist[category])
+  }
 
+  const backToTop = () => setSelectedCategory(null)
+  const onUpdateCheckList = (checklistCategory) => {
+    const category = checklistCategory.id
+    switch (category) {
+      case 'frontend':
+        setFrontendList(checklistCategory)
+        break
+      case 'backend':
+        setBackendList(checklistCategory)
+        break
+      case 'infra':
+        setInfraList(checklistCategory)
+        break
+      case 'pipeline':
+        setPipelineList(checklistCategory)
+        break
+    }
+    setSelectedCategory(checklistCategory)
+  }
+  
   return (
     <main className={styles.main}>
-      <DoughnutChart
-        chartData={chartData}
-      />
+      {
+        !!selectedCategory ? 
+        <Checklist 
+          checklistCategory={selectedCategory}
+          backToTop={backToTop}
+          onUpdateCheckList={onUpdateCheckList}
+        /> :
+        <Grid container mt={5} pl={8}>
+          <Grid item xs={5}>
+            <DoughnutChart
+              onClickDoughnut={onClickDoughnut}
+              category='frontend'
+              checklistCategory={frontendList}
+            />
+          </Grid>
+          <Grid item xs={2}/>
+          <Grid item xs={5}>
+            <DoughnutChart
+              onClickDoughnut={onClickDoughnut}
+              category='backend'
+              checklistCategory={backendList}
+            />
+          </Grid>
+          <Grid item xs={5}>
+            <DoughnutChart
+              onClickDoughnut={onClickDoughnut}
+              category='infra'
+              checklistCategory={infraList}
+            />
+          </Grid>
+          <Grid item xs={2}/>
+          <Grid item xs={5}>
+            <DoughnutChart
+              onClickDoughnut={onClickDoughnut}
+              category='pipeline'
+              checklistCategory={pipelineList}
+            />
+          </Grid>
+        </Grid>
+      }
+      
     </main>
   );
 }

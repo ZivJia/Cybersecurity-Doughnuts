@@ -6,8 +6,8 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
-  min-height: 100vh;
+  height: 100%;
+  width: 100%;
 }
 
 .page_description__86bsR {
