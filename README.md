@@ -25,23 +25,15 @@ When you mark an item is done, the progress bar on the top will proceed!
 
 ## Areas of focus:
 
-### Infrastructure Set Up
-1. Give minimal access rights for co-workers on infra
-2. Have Infrastructure as Code (IaC) setup to reduce human mistakes
-3. Have you configuration and database backups set up
-4. Enable all logging for the infrastructure service you use
-5. Build a Runbook for disaster recovery when the infrastructure is down.
-6. Have the Web Application Firewalls (WAF) set up
-7. Only allow traffic from known IP ranges
-8. Disable insecure protocols like telnet and SNMP
-
-### Deployment Pipeline Recommendations
-1. Make sure only necessary people has access to CI/CD credentials
-2. Set up vulnerability scanner, so you get notified if any of your dependencies are vulnerable.
-3. Gitleak scanner integration
-4. Checkov integrations
-5. Syft Software Bill of Materials integration
-6. Semgrep integration
+### Frontend Development Checklist
+1. Be aware of Cross-Site Scripting (XSS)
+2. Be aware of Cross-Site Request Forgery (CSRF)
+3. Avoid allowing third party cookie whenever possible
+4. Authenticate the user before granting access
+5. Strict input validation for form submission
+6. Set timeouts for browser sessions
+7. Avoid using any sensitive identifier in the URL parameters
+8. Never hardcode sensitive information
 
 ### Backend Development Checklist
 1. Verify the user with every request, using specialized authentication server
@@ -60,15 +52,23 @@ When you mark an item is done, the progress bar on the top will proceed!
 14. Hooks logs into SIEM systems
 15. Never hardcode sensitive information
 
-### Frontend Development Checklist
-1. Be aware of Cross-Site Scripting (XSS)
-2. Be aware of Cross-Site Request Forgery (CSRF)
-3. Avoid allowing third party cookie whenever possible
-4. Authenticate the user before granting access
-5. Strict input validation for form submission
-6. Set timeouts for browser sessions
-7. Avoid using any sensitive identifier in the URL parameters
-8. Never hardcode sensitive information
+### Infrastructure Set Up
+1. Give minimal access rights for co-workers on infra
+2. Have Infrastructure as Code (IaC) setup to reduce human mistakes
+3. Have you configuration and database backups set up
+4. Enable all logging for the infrastructure service you use
+5. Build a Runbook for disaster recovery when the infrastructure is down.
+6. Have the Web Application Firewalls (WAF) set up
+7. Only allow traffic from known IP ranges
+8. Disable insecure protocols like telnet and SNMP
+
+### Deployment Pipeline Recommendations
+1. Make sure only necessary people has access to CI/CD credentials
+2. Set up vulnerability scanner, so you get notified if any of your dependencies are vulnerable.
+3. Gitleak scanner integration
+4. Checkov integrations
+5. Syft Software Bill of Materials integration
+6. Integration for open-source software scan
 
 
 ## Learning Material
