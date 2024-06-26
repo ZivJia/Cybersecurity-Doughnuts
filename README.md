@@ -15,12 +15,17 @@ Click into each module and check on things you already adopted.
 The overall progress will be changed whenever you mark the item as done. This is a great handbook for you when doing fullstack development.
 For different projects you own, I highly suggest you create a cybersecurity measurement in the UI for it, so that you can always come back and refer to it.
 
-The goal is to Close the Doughnuts!
+### The goal is to Close the Doughnuts!
+![alt text](https://github.com/ZivJia/Cybersecurity-Doughnuts/blob/master/pics/Doughnuts.png?raw=true)
+
+### Click each doughnut you will enter the page to mark your progress
+When you mark an item is done, the progress bar on the top will proceed!
+![alt text](https://github.com/ZivJia/Cybersecurity-Doughnuts/blob/master/pics/Progress.png?raw=true)
 
 
-### Areas of focus:
+## Areas of focus:
 
-#### Infrastructure Set Up
+### Infrastructure Set Up
 1. Give minimal access rights for co-workers on infra
 2. Have Infrastructure as Code (IaC) setup to reduce human mistakes
 3. Have you configuration and database backups set up
@@ -30,7 +35,7 @@ The goal is to Close the Doughnuts!
 7. Only allow traffic from known IP ranges
 8. Disable insecure protocols like telnet and SNMP
 
-#### Deployment Pipeline Recommendations
+### Deployment Pipeline Recommendations
 1. Make sure only necessary people has access to CI/CD credentials
 2. Set up vulnerability scanner, so you get notified if any of your dependencies are vulnerable.
 3. Gitleak scanner integration
@@ -38,7 +43,7 @@ The goal is to Close the Doughnuts!
 5. Syft Software Bill of Materials integration
 6. Semgrep integration
 
-#### Backend Development Checklist
+### Backend Development Checklist
 1. Verify the user with every request, using specialized authentication server
 2. API should have authorization built up against the requester
 3. API key access should have roles that ties to authorization
@@ -55,7 +60,7 @@ The goal is to Close the Doughnuts!
 14. Hooks logs into SIEM systems
 15. Never hardcode sensitive information
 
-#### Frontend Development Checklist
+### Frontend Development Checklist
 1. Be aware of Cross-Site Scripting (XSS)
 2. Be aware of Cross-Site Request Forgery (CSRF)
 3. Avoid allowing third party cookie whenever possible
