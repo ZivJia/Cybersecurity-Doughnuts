@@ -12,8 +12,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to view yo
 
 Click into each module and check on things you already adopted.
 
-The overall score will be changed whenever you mark the item as done. This is a great handbook for you when doing fullstack development.
+The overall progress will be changed whenever you mark the item as done. This is a great handbook for you when doing fullstack development.
 For different projects you own, I highly suggest you create a cybersecurity measurement in the UI for it, so that you can always come back and refer to it.
+
+The goal is to Close the Doughnuts!
+
 
 ### Areas of focus:
 
