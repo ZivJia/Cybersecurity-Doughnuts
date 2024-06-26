@@ -63,12 +63,82 @@
   },
   "backend": {
     "id": "backend",
-    "name": "Verify the user with every request",
+    "name": "Backend cybersecurity checklist",
     "finishedColor": "#73ffff",
     "unfinishedColor": "#60d1d1",
     "checklist": [
       {
-        "name": "Check user input to prevent XSS",
+        "name": "Never hardcode sensitive information",
+        "description": "Again, don't do that",
+        "value": false
+      },
+      {
+        "name": "Authenticate the user with every request",
+        "value": false
+      },
+      {
+        "name": "User industrial standard and existing service for authentication",
+        "description": "For example, OKTA",
+        "value": false
+      },
+      {
+        "name": "API key access should have roles that ties to authorization",
+        "description": "For example, OKTA",
+        "value": false
+      },
+      {
+        "name": "API should have authorization built up against the requester's role",
+        "description": "Always attach roles into requester, this will help development too!",
+        "value": false
+      },
+      {
+        "name": "API keys should be rotated with fixed amount of time",
+        "description": "Will lower the impact in case of a token breach",
+        "value": false
+      },
+      {
+        "name": "Validation user input to prevent SQL injections",
+        "description": "Be really care when taking in user input as SQL parameters, always validate them",
+        "value": false
+      },
+      {
+        "name": "Use HTTPs if possible",
+        "description": "Requests are encrypted in HTTPs!",
+        "value": false
+      },
+      {
+        "name": "Use most up to date credential generating algorithms",
+        "description": "Older generation algorithms are easier to be beaked by hackers.",
+        "value": false
+      },
+      {
+        "name": "Never store credentials in plain text",
+        "description": "Imaging if you DB is leaked. Don't store plain text!",
+        "value": false
+      },
+      {
+        "name": "Use technologies like PGP encryption for files",
+        "description": "When store files, encrypt them before storing",
+        "value": false
+      },
+      {
+        "name": "Scan random uploaded files",
+        "description": "If you allow user to upload files, please scan it for its intention",
+        "value": false
+      },
+      {
+        "name": "Implement a good loggers",
+        "description": "Logger with important information helps to identify potential hacking activities quickly",
+        "value": false
+      },
+      {
+        "name": "Produce logs for every access temptation",
+        "description": "Log temptation for both human users as well as Service Accounts",
+        "value": false
+      },
+      {
+        "name": "Hooks logs into SIEM systems",
+        "description": "SIEM systems will help to identify risks from your logs and notify you",
         "value": false
       }
     ]
