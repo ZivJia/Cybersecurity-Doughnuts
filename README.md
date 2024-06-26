@@ -1,4 +1,6 @@
-The Cybersecurity checklist for fullstack software engineers
+The Cybersecurity checklist for fullstack software engineers.
+
+**Let closing the Doughnuts!**
 
 ## Getting Started
 
