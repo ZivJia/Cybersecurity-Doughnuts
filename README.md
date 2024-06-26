@@ -66,7 +66,10 @@ For different projects you own, I highly suggest you create a cybersecurity meas
 ## Learning Material
 Coursera       https://www.coursera.org/
 PortSwigger    https://portswigger.net/
-
+Zenarmor       https://www.zenarmor.com/
+OKTA           https://developer.okta.com/
+GitHub         https://github.blog/2022-02-02-build-ci-cd-pipeline-github-actions-four-steps/
+Checkov        https://www.checkov.io/
 
 ## Future and Ongoing
 This Repository is established by my own experience, from online learnings and lectures. With more experience accumulated, these security measures will be updated and newest recommendations will be provided.
