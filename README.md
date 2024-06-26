@@ -1,6 +1,6 @@
 The Cybersecurity checklist for fullstack software engineers.
 
-**Let closing the Doughnuts!**
+**Let's close the Doughnuts!**
 
 ## Getting Started
 
