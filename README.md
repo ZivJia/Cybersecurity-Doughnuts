@@ -62,6 +62,12 @@ For different projects you own, I highly suggest you create a cybersecurity meas
 7. Avoid using any sensitive identifier in the URL parameters
 8. Never hardcode sensitive information
 
+
+## Learning Material
+Coursera       https://www.coursera.org/
+PortSwigger    https://portswigger.net/
+
+
 ## Future and Ongoing
 This Repository is established by my own experience, from online learnings and lectures. With more experience accumulated, these security measures will be updated and newest recommendations will be provided.
 I recommend to transfer your previous measurements into the most up-to-date one.

@@ -7,12 +7,56 @@
     "cardColor": "#d9ffe3",
     "checklist": [
       {
-        "name": "1111Check user input to prevent XSS",
-        "description": "Assange, 52, has agreed to plead guilty to a single criminal count of conspiring to obtain and disclose classified U.S. national defense documents, according to filings in the U.S. District Court for the Northern Mariana Islands.",
-        "value": true
+        "name": "Never hardcode secrets/tokens/sensitive information in the Code!",
+        "description": "Of course we know better",
+        "value": false
       },
       {
         "name": "Check user input to prevent XSS",
+        "description": "Check if the user inputted text is has an ill will",
+        "value": false
+      },
+      {
+        "name": "Render user input after HTML encoding",
+        "description": "Before putting any user provided text into the DOM, should perform HTML ending, so no script will be executed by the browser",
+        "value": false
+      },
+      {
+        "name": "Set up content security Policy",
+        "description": "Use Content Security Policy (CSP) to reduce the severity of XSS attacks",
+        "value": false
+      },
+      {
+        "name": "Use existing library/service to verify CSRF token",
+        "value": false
+      },
+      {
+        "name": "Store the CSRF token with user session on server side",
+        "description": "The server-side application should verify that the request includes a token which matches the value that was stored in the user's session",
+        "value": false
+      },
+      {
+        "name": "Use SameSite cookie restriction to prevent CSRF",
+        "description": "Set SameSite restrictions on each cookie you issue",
+        "value": false
+      },
+      {
+        "name": "Avoid Third-Party cookies",
+        "description": "Third-Party cookies are known for the vulnerability and will be shutdown by major browser providers",
+        "value": false
+      },
+      {
+        "name": "Authenticate the user before return the web artifacts",
+        "description": "Web artifacts sometimes contains information that hackers can guess the meaning out of.",
+        "value": false
+      },
+      {
+        "name": "Set timeouts for browser sessions",
+        "value": false
+      },
+      {
+        "name": "Never send sensitive identifier & secrets in URL parameters",
+        "description": "Url parameter is not encoded, but the request body is",
         "value": false
       }
     ]
